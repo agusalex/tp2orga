@@ -15,7 +15,7 @@
 
 
 // DOC_HELP
-static char doc[] = "Organización del Computador 2.\nTrabajo Práctico Nro. 2\nPrograma para procesamiento de imágenes BMP.\n";
+
 
 
 extern int asmPrint
@@ -28,6 +28,7 @@ int asm_Print(char * msg){
 
 
 int main (int argc, char* argv[]) {
+	asm_Print("Organización del Computador 2.\nTrabajo Práctico Nro. 2\nPrograma para procesamiento de imágenes BMP.\n");
 	int resolucion = 1080;
 	BMPDATA bmpData;
 	int i;
@@ -38,9 +39,9 @@ int main (int argc, char* argv[]) {
 	}*/
 
 	// carga el archivo bmp
-	if (loadBmpFile ("rayada.bmp", &bmpData) != 0) {
+	if (loadBmpFile ("lena.bmp", &bmpData) != 0) {
 
-		printf ("Error al leer el archivo %s\n\n", "rayada.bmp");
+		printf ("Error al leer el archivo %s\n\n", "lena.bmp");
 		return 1;
 	}
 
@@ -62,11 +63,10 @@ int main (int argc, char* argv[]) {
 	
 	printf("\nTiempo de proceso: %ld ticks.\n\n", end-start);
 
-	if (saveBmpFile ("rayada.bmp", &bmpData) != 0)
+	if (saveBmpFile ("lena.bmp", &bmpData) != 0)
 		asm_Print("Error al grabar el archivo!");
 	
 	// libera memoria
 	limpiarBmpData(&bmpData);
-
 	return 0;
 }

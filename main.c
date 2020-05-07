@@ -28,7 +28,7 @@ int asm_Print(char * msg){
 
 
 int main (int argc, char* argv[]) {
-//	asm_Print("Organización del Computador 2.\nTrabajo Práctico Nro. 2\nPrograma para procesamiento de imágenes BMP.\n");
+	asm_Print("Organización del Computador 2.\nTrabajo Práctico Nro. 2\nPrograma para procesamiento de imágenes BMP.\n");
 	int resolucion = 1080;
 	BMPDATA bmpData;
 	int i;
